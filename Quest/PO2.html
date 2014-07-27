@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>Quest</title>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1><span class="blue-text">Quest</span> Alliance</h1>
+			<h2>Wel<span class="white-text">come</span></h2>
+		</header>
+		
+		<nav id="menu">
+			<ul>
+			</ul>
+	    </nav>
+		 
+		
+	<section>
+			<h3>List of Jobs</h3>
+			Enter Company Id:<input type="text" name="loc"><br/><br/>
+			<input type="submit" value="Next">			
+    </section>
+	
+</div><!--container end-->
+	<div style="clear;both"></div>
+	<footer>
+		<marquee> Copyright &copy; 2014, Quest Alliance </marquee>
+	</footer>
+	<?php
+include("config.php");
+$sql="select id,name,job_name,locality from jobs natural join employer";
+mysqli_query($con,$sql);
+echo "<table border='1'>
+<tr>
+<th>Name</th>
+<th>Job Name</th>
+<th>Locality</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+  {
+	 echo "<tr>";
+	echo "<td>" . $row['id'] . "</td>";
+	echo "<td>" . $row['name'] . "</td>";
+	echo "<td>" . $row['job_name'] . "</td>";
+	echo "<td>" . $row['locality'] . "</td>";
+	echo "</tr>";
+  }
+
+mysqli_close($con);
+?>
+</body>
+</html>

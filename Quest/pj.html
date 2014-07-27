@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>Quest</title>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1><span class="blue-text">Quest</span> Alliance</h1>
+			<h2>Wel <span class="white-text">come</span></h2>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li class="menuitem"><a href="./emp.html">Home</a></li>
+				<li class="menuitem"><a href="./pj.html">Post a Job</a></li>
+				<li class="menuitem"><a href="./recfrmpo.html">Recommendations</a></li>
+			</ul>
+	    </nav>
+		<section>
+			<h3>Post a job</h3>
+			
+			<form method="post" action="joboffer.php">
+				<p>
+					<label for="name">Job Name:</label>
+					<input type="text" name="jn">
+				</p>
+				<p>
+					<label for="">Job Vacancies: </label>
+					<input type="text" name="jv">
+				</p>
+				Job Description:<textarea name="description"></textarea>
+				<p>
+					<label for="">Job Requirements: </label>
+					<input type="text" name="jr">
+				</p>
+				<p>
+					<label for="">Locality: </label>
+					<input type="text" name="loc">
+				</p>
+				<p>
+					<input type="submit" value="Post">
+				
+				</p>
+				
+			</form>
+    </section>
+	
+</div><!--container end-->
+	<div style="clear;both"></div>
+	<footer>
+		Copyright &copy; 2014, Quest Alliance
+	</footer>
+</body>
+</html>
