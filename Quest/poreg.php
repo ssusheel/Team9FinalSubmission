@@ -27,7 +27,7 @@ exit;
 
 $_SESSION['user']= $_POST["pousr"];
 
-header("location:PO2.html");
+header("location:PO2.php");
 
 // It is the page where you want to redirect user after login.
 

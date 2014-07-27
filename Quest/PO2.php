@@ -20,7 +20,9 @@
 		
 	<section>
 			<h3>List of Jobs</h3>
-			Enter Company Id:<input type="text" name="loc"><br/><br/>
+			Enter Company Id:<input type="text" name="loc" id="loc"><br/><br/>
+			<?php 
+			include("config.php");
 			$sql="select name,job_name,locality,id from jobs natural join employer;";
 
 $result=mysql_query($sql);
@@ -32,14 +34,13 @@ echo "<table border='1'>
 <th>Locality</th>
 <th>Employee ID </th>
 </tr>";
-Enter the company ID <input type="text" name="cid">
-<?php
-include("config.php");
+
+
 
 
 while($row = mysql_fetch_array($result))
   {
-	echo "hello";
+	
 	 echo "<tr>";
 	//echo "<input type="checkbox" name="check[]" value="$i++">";
 	echo "<td>" . $row['name'] . "</td>";
@@ -51,8 +52,8 @@ while($row = mysql_fetch_array($result))
 echo "</table>";
 
 mysqli_close($con);
-?>
-			<input type="submit" value="Next">			
+?><form action="PO3.php" method="post">
+			<input type="submit" value="Next">	</form>		
     </section>
 	
 </div><!--container end-->
